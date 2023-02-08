@@ -19,7 +19,7 @@ Feature: Athena Portal API Automation
     Then Verify Status code <Expected_status>
     Examples:
       | endpoint       | Method | Expected_status | SampleName      |
-      | postForgotPass | post   | 400             | ForgotpassEmail |
+      | postForgotPass | post   | 200             | forgotpassEmail |
 
   Scenario Outline: Reset Password
     Given Authenticate endpoint and method and samplename "<endpoint>" and "<Method>" and "<SampleName>"
