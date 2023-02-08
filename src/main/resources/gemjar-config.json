@@ -1,0 +1,22 @@
+{
+  "environment": "beta",
+  "projectName": "ATHENA",
+  "token": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoZWxsbzJAZ21haWwuY29tIiwiZXhwIjoxNjc1ODY2ODg3LCJpYXQiOjE2NzU4NDg4ODd9.Iedu-fw6le2QVA5t9zzk0cPvxpagIUKtfLBGCBuhH58Rt0T0wjqzv6hl4OYQacWCDpNweGV4jjbKrP1zv-BfJA",
+  "gemjarUserName": "tchauhan",
+  "gemjarToken": "3548cf51-4f28-4949-a8db-bdbb2f3027091673956073987",
+  "gemjarSubID": "test_id",
+  "glueCode": "com.qa.gemini.stepDefinition",
+  "feature": "src/main/resources/Features/AthenaAPI.feature",
+  "jewelEntryUrl": "https://apis.gemecosystem.com/enter-point",
+  "reportLocation": "/tmp",
+  "prod": {
+    "postApi": "https://devapi.geminisolutions.com/gemassessment/authenticate"
+  },
+  "beta": {
+    "postApi": "https://devapi.geminisolutions.com/gemassessment/authenticate",
+    "getAllAssignedTest": "https://devapi.geminisolutions.com/gemassessment/api/getAllAssignedTests",
+    "putUpdatePass": "https://devapi.geminisolutions.com/gemassessment/api/updatePassword",
+    "postForgotPass": "https://devapi.geminisolutions.com/gemassessment/api/forgotPassword",
+    "postRegister": "https://devapi.geminisolutions.com/gemassessment/api/registerUser"
+  }
+}
