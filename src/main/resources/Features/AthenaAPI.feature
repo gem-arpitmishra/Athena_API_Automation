@@ -13,6 +13,7 @@ Feature: Athena Portal API Automation
     Examples:
       | endpoint | Method | Expected_status | SampleName        |
       | postApi  | post   | 400             | Invalidlogin_cred |
+      | postApi  | post   | 400             | Incompletelogin_cred |
 
   Scenario Outline: Forgot Password
     Given Set email endpoint and method and samplename "<endpoint>" and "<Method>" and "<SampleName>"
@@ -26,4 +27,4 @@ Feature: Athena Portal API Automation
     Then Verify Status code <Expected_status>
     Examples:
       | endpoint      | Method | Expected_status | SampleName |
-      | putUpdatePass | post   | 200             | ResetPass  |
+      | putUpdatePass | put   | 200             | ResetPass  |

@@ -23,10 +23,11 @@ public class stepDefinitions {
 
     @Given("^Set email endpoint and method and samplename (.+) and (.+) and (.+)")
     public void forgot_password(String url, String method, String sampleName) throws Exception {
-        status= utils.CheckAPiWithAuth(url,method,utils.GetBearerToken(),sampleName).getStatus();
+        status= utils.HitAPIWithToken(url,method,sampleName).getStatus();
     }
 
     @Given("Authenticate endpoint and method and samplename (.+) and (.+) and (.+)")
     public void resetPassword(String url, String method, String sampleName) throws Exception {
+
     }
 }

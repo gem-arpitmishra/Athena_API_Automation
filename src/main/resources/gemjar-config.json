@@ -17,6 +17,7 @@
     "getAllAssignedTest": "https://devapi.geminisolutions.com/gemassessment/api/getAllAssignedTests",
     "putUpdatePass": "https://devapi.geminisolutions.com/gemassessment/api/updatePassword",
     "postForgotPass": "https://devapi.geminisolutions.com/gemassessment/api/forgotPassword",
-    "postRegister": "https://devapi.geminisolutions.com/gemassessment/api/registerUser"
+    "postRegister": "https://devapi.geminisolutions.com/gemassessment/api/registerUser",
+    "getUser" : "https://devapi.geminisolutions.com/gemassessment/api/findUser"
   }
 }

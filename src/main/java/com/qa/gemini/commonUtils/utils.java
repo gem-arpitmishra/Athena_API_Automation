@@ -51,7 +51,7 @@ public class utils {
         }
     }
 
-    public static Response HitAPIWithToken(String UrlNameFromConfig, String method, String step, Map<String, String> headers) throws Exception {
+    public static Response HitAPIWithToken(String UrlNameFromConfig, String method, String step, Map<String, String> headers,String sampleName) throws Exception {
         Response response = new Response();
         try {
             Request request = new Request();
@@ -65,6 +65,8 @@ public class utils {
             if (!step.isEmpty()) {
                 request.setStep(step);
             }
+            String payload = ProjectSampleJson.getSampleDataString(sampleName);
+            request.setRequestPayload(payload);
             response = ApiInvocation.handleRequest(request);
             GemTestReporter.addTestStep(method.toUpperCase() + " Request Verification ", method.toUpperCase() + " Request Executed Successfully", STATUS.PASS);
             if (step.isEmpty() && !(response.getErrorMessage().isEmpty())) {
@@ -83,8 +85,10 @@ public class utils {
         return response;
     }
 
-    public static Response HitAPIWithToken(String UrlNameFromConfig, String method) throws Exception {
-        return HitAPIWithToken(UrlNameFromConfig, method, "", new HashMap<>());
+    public static Response HitAPIWithToken(String UrlNameFromConfig, String method,String samplename) throws Exception {
+        HashMap<String,String> token=new HashMap<String,String>();
+        token.put("Origin","https://devapi.geminisolutions.com/gemassessment");
+        return HitAPIWithToken(UrlNameFromConfig, method, "Forgot Password", token,samplename);
     }
 
     public static Response CheckAPiWithAuth(String UrlNameFromConfig, String method, String bt, String sampleName) throws Exception {
