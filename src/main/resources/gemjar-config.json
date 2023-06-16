@@ -6,9 +6,7 @@
   "gemjarToken": "3548cf51-4f28-4949-a8db-bdbb2f3027091673956073987",
   "gemjarSubID": "test_id",
   "glueCode": "com.qa.gemini.stepDefinition",
-  "feature": "src/main/resources/Features/AthenaAPI.feature",
   "jewelEntryUrl": "https://apis.gemecosystem.com/enter-point",
-  "reportLocation": "/tmp",
   "prod": {
     "postApi": "https://devapi.geminisolutions.com/gemassessment/authenticate"
   },
